@@ -68,8 +68,8 @@ public class Kartya {
         String[] Elso = new String[7];
         String[] Masodik = new String[7];
         String[] Harmadik = new String[7];
-        for (int i = 1; i < 7; i++) {
-            Elso[i] = tomb[18-(i-1)*3];
+        for (int i = 0; i < 7; i++) {
+            Elso[i] = tomb[18-i*3];
         }
         for (String tomb1 : Elso) {
 
@@ -78,8 +78,8 @@ public class Kartya {
         }
         
         
-        for (int i = 1; i < 7; i++) {
-            Masodik[i] = tomb[19-(i-1)*3];
+        for (int i = 0; i < 7; i++) {
+            Masodik[i] = tomb[19-i*3];
         }
         for (String tomb1 : Masodik) {
 
@@ -88,8 +88,8 @@ public class Kartya {
             }
         
         
-        for (int i = 1; i < 7; i++) {
-            Harmadik[i] = tomb[20-(i-1)*3];
+        for (int i = 0; i < 7; i++) {
+            Harmadik[i] = tomb[20-i*3];
         }
         
         for (String tomb1 : Harmadik) {
