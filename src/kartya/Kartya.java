@@ -53,6 +53,7 @@ public class Kartya {
         int szam;
         System.out.println("irj egy lapot!: ");
         szam = beker.nextInt();
+        //teszt sor
     }
 
     private static void Kever() {
