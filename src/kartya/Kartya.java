@@ -15,7 +15,7 @@ public class Kartya {
     }
 
     private static String[] Kirak() {
-        String[] tomb = new String[26];
+        String[] tomb = new String[21];
         int index = 0;
 
         String[] szin = {"P", "T", "Z", "M"};
@@ -73,44 +73,39 @@ public class Kartya {
 
         
        
-        String[] Elso = new String[7];
-        String[] Masodik = new String[7];
-        String[] Harmadik = new String[7];
-        for (int i = 1; i < 7; i++) {
+      
+        
+
+
+        String[] Elso = new String[6];
+        String[] Masodik = new String[6];
+        String[] Harmadik = new String[6];
+        for (int i = 1; i < 6; i++) {
             Elso[i] = tomb[19-(i-1)*3];
         }
-        for (int i = 1; i < 7; i++) {
+        System.out.println(tomb[19]);
+        for (String tomb1 : Elso) {
+
+            System.out.println(tomb1);
+
+            }
+        for (int i = 1; i < 6; i++) {
             Masodik[i] = tomb[20-(i-1)*3];
         }
-        for (int i = 1; i < 7; i++) {
+        for (String tomb1 : Masodik) {
+
+            System.out.println( tomb1);
+
+            }
+        for (int i = 1; i < 6; i++) {
             Harmadik[i] = tomb[21-(i-1)*3];
         }
         
-     
-       
-        for (int i = 1; i > 7; i++) {
-            tomb[i] =Elso[i];
-        }
-        for (int i = 1; i > 7; i++) {
-            tomb[i+7] = Masodik[i];
-        }
-        for (int i = 1; i > 7; i++) {
-            tomb[i+14] = Harmadik[i];
-        }
-        int i = 0;
-        for (String tomb1 : tomb) {
+        for (String tomb1 : Harmadik) {
 
             System.out.printf("%-7s", tomb1);
 
-            i++;
-            if (i == 3) {
-                System.out.println("");
-                i = 0;
             }
-
-        }
-        
-        
 
     }
 
