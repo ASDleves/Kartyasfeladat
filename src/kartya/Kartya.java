@@ -3,7 +3,7 @@ package kartya;
 import java.util.Scanner;
 
 public class Kartya {
-
+    static String[] tomb=Kirak();
     public static void main(String[] args) {
         Kirak();
         Melyik();
@@ -11,7 +11,7 @@ public class Kartya {
         EzVolt();
     }
 
-    private static void Kirak() {
+    private static String[] Kirak() {
         String[] tomb = new String[21];
         int index = 0;
 
@@ -46,6 +46,7 @@ public class Kartya {
             }
 
         }
+        return tomb;
     }
 
     private static void Melyik() {
@@ -61,10 +62,26 @@ public class Kartya {
                 helyes = true;
             }
         }
+        
         //teszt sor
     }
 
     private static void Kever() {
+        
+       String[] Atomb = new String[7];
+       String[] Btomb = new String[7];
+       String[] Ctomb = new String[7];
+     
+       
+        for (int i = 0; i > 7; i++) {
+            Atomb[i] =kapotttomb[i]
+        }
+        for (int i = 0; i > 7; i++) {
+            Btomb[i] =kapotttomb[i]
+        }
+        for (int i = 0; i > 7; i++) {
+            Ctomb[i] =kapotttomb[i]
+        }
     }
 
     private static void EzVolt() {
