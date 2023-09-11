@@ -3,16 +3,19 @@ package kartya;
 import java.util.Scanner;
 
 public class Kartya {
+
     static String[] tomb=Kirak();
+
+   
+
     public static void main(String[] args) {
-        Kirak();
         Melyik();
         Kever();
         EzVolt();
     }
 
     private static String[] Kirak() {
-        String[] tomb = new String[21];
+        String[] tomb = new String[26];
         int index = 0;
 
         String[] szin = {"P", "T", "Z", "M"};
@@ -67,21 +70,48 @@ public class Kartya {
     }
 
     private static void Kever() {
+
         
-       String[] Atomb = new String[7];
-       String[] Btomb = new String[7];
-       String[] Ctomb = new String[7];
+       
+        String[] Elso = new String[7];
+        String[] Masodik = new String[7];
+        String[] Harmadik = new String[7];
+        for (int i = 1; i < 7; i++) {
+            Elso[i] = tomb[19-(i-1)*3];
+        }
+        for (int i = 1; i < 7; i++) {
+            Masodik[i] = tomb[20-(i-1)*3];
+        }
+        for (int i = 1; i < 7; i++) {
+            Harmadik[i] = tomb[21-(i-1)*3];
+        }
+        
      
        
-        for (int i = 0; i > 7; i++) {
-            Atomb[i] =kapotttomb[i]
+        for (int i = 1; i > 7; i++) {
+            tomb[i] =Elso[i];
         }
-        for (int i = 0; i > 7; i++) {
-            Btomb[i] =kapotttomb[i]
+        for (int i = 1; i > 7; i++) {
+            tomb[i+7] = Masodik[i];
         }
-        for (int i = 0; i > 7; i++) {
-            Ctomb[i] =kapotttomb[i]
+        for (int i = 1; i > 7; i++) {
+            tomb[i+14] = Harmadik[i];
         }
+        int i = 0;
+        for (String tomb1 : tomb) {
+
+            System.out.printf("%-7s", tomb1);
+
+            i++;
+            if (i == 3) {
+                System.out.println("");
+                i = 0;
+            }
+
+        }
+        
+        
+
     }
 
     private static void EzVolt() {
