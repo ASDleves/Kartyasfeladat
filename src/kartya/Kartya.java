@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Kartya {
 
     static String[] tomb=Kirak();
-
+    static int valasztas = Melyik();
    
 
     public static void main(String[] args) {
-        Melyik();
         Kever();
         EzVolt();
     }
@@ -52,12 +51,11 @@ public class Kartya {
         return tomb;
     }
 
-    private static void Melyik() {
+    private static int Melyik() {
         Scanner beker = new Scanner(System.in);
-        int szam;
         boolean helyes = false;
+        int szam = 0;
         while (helyes != true) {
-
             System.out.print("Melyik oszlop (1-3)?: ");
             szam = beker.nextInt();
             if (szam > 0 && szam < 4) {
@@ -65,49 +63,102 @@ public class Kartya {
                 helyes = true;
             }
         }
+        return szam;
         
-        //teszt sor
+        
     }
 
     private static void Kever() {
 
-        
-       
-      
-        
-
-
-        String[] Elso = new String[6];
-        String[] Masodik = new String[6];
-        String[] Harmadik = new String[6];
-        for (int i = 1; i < 6; i++) {
-            Elso[i] = tomb[19-(i-1)*3];
+        String[] Elso = new String[7];
+        String[] Masodik = new String[7];
+        String[] Harmadik = new String[7];
+        for (int i = 0; i < 7; i++) {
+            Elso[i] = tomb[18-i*3];
         }
-        System.out.println(tomb[19]);
-        for (String tomb1 : Elso) {
+        
+        
+        for (int i = 0; i < 7; i++) {
+            Masodik[i] = tomb[19-i*3];
+        }
+        for (int i = 0; i < 7; i++) {
+            Harmadik[i] = tomb[20-i*3];
+        }
 
-            System.out.println(tomb1);
-
+        int index;
+        switch(valasztas){
+            case 1:
+            for(index = 0; index < 7; index++){
+            tomb[index] = Masodik[index];
             }
-        for (int i = 1; i < 6; i++) {
-            Masodik[i] = tomb[20-(i-1)*3];
-        }
-        for (String tomb1 : Masodik) {
-
-            System.out.println( tomb1);
-
+            for(index = 0; index < 7; index++){
+            tomb[index+7] = Elso[index];
             }
-        for (int i = 1; i < 6; i++) {
-            Harmadik[i] = tomb[21-(i-1)*3];
-        }
-        
-        for (String tomb1 : Harmadik) {
+            
+            for(index = 0; index < 7; index++){
+            tomb[index+14] = Harmadik[index];
+            }
+             int i = 0;
+        for (String tomb1 : tomb) {
 
             System.out.printf("%-7s", tomb1);
 
+            i++;
+            if (i == 3) {
+                System.out.println("");
+                i = 0;
             }
+        }
+            break;
+            case 2:
+                for(index = 0; index < 7; index++){
+            tomb[index] = Elso[index];
+            }
+            for(index = 0; index < 7; index++){
+            tomb[index+7] = Masodik[index];
+            }
+            
+            
+            for(index = 0; index < 7; index++){
+            tomb[index+14] = Harmadik[index];
+            }
+             i = 0;
+        for (String tomb1 : tomb) {
 
+            System.out.printf("%-7s", tomb1);
+
+            i++;
+            if (i == 3) {
+                System.out.println("");
+                i = 0;
+            }
+        }
+            break;
+            case 3:
+            for(index = 0; index < 7; index++){
+            tomb[index] = Elso[index];
+            }
+            for(index = 0; index < 7; index++){
+            tomb[index+7] = Harmadik[index];
+            }
+            for(index = 0; index < 7; index++){
+            tomb[index+14] = Masodik[index];
+            }
+             i = 0;
+        for (String tomb1 : tomb) {
+
+            System.out.printf("%-7s", tomb1);
+
+            i++;
+            if (i == 3) {
+                System.out.println("");
+                i = 0;
+            }
+        }
+            break;
+        }
     }
+    
 
     private static void EzVolt() {
 
