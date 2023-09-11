@@ -65,19 +65,35 @@ public class Kartya {
     }
 
     private static void Kever() {
-        String[] Elso = new String[7];
-        String[] Masodik = new String[7];
-        String[] Harmadik = new String[7];
-        for (int i = 0; i < 7; i++) {
+        String[] Elso = new String[6];
+        String[] Masodik = new String[6];
+        String[] Harmadik = new String[6];
+        for (int i = 1; i < 6; i++) {
             Elso[i] = tomb[19-(i-1)*3];
         }
-        for (int i = 0; i < 7; i++) {
+        System.out.println(tomb[19]);
+        for (String tomb1 : Elso) {
+
+            System.out.println(tomb1);
+
+            }
+        for (int i = 1; i < 6; i++) {
             Masodik[i] = tomb[20-(i-1)*3];
         }
-        for (int i = 0; i < 7; i++) {
+        for (String tomb1 : Masodik) {
+
+            System.out.println( tomb1);
+
+            }
+        for (int i = 1; i < 6; i++) {
             Harmadik[i] = tomb[21-(i-1)*3];
         }
         
+        for (String tomb1 : Harmadik) {
+
+            System.out.println( tomb1);
+
+            }
     }
 
     private static void EzVolt() {
