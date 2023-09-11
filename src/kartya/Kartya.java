@@ -3,15 +3,14 @@ package kartya;
 import java.util.Scanner;
 
 public class Kartya {
-
+    static String[] tomb = Kirak();
     public static void main(String[] args) {
-        Kirak();
         Melyik();
         Kever();
         EzVolt();
     }
 
-    private static void Kirak() {
+    private static String[] Kirak() {
         String[] tomb = new String[21];
         int index = 0;
 
@@ -46,6 +45,7 @@ public class Kartya {
             }
 
         }
+        return tomb;
     }
 
     private static void Melyik() {
@@ -65,6 +65,19 @@ public class Kartya {
     }
 
     private static void Kever() {
+        String[] Elso = new String[7];
+        String[] Masodik = new String[7];
+        String[] Harmadik = new String[7];
+        for (int i = 0; i < 7; i++) {
+            Elso[i] = tomb[19-(i-1)*3];
+        }
+        for (int i = 0; i < 7; i++) {
+            Masodik[i] = tomb[20-(i-1)*3];
+        }
+        for (int i = 0; i < 7; i++) {
+            Harmadik[i] = tomb[21-(i-1)*3];
+        }
+        
     }
 
     private static void EzVolt() {
