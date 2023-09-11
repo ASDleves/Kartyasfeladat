@@ -36,7 +36,7 @@ public class Kartya {
 
         int i = 0;
         for (String tomb1 : tomb) {
-            System.out.print(tomb1+" ");
+            System.out.printf("%-7s",tomb1);
             i++;
             if (i == 3) {
                 System.out.println("");
