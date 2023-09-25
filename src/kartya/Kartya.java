@@ -20,7 +20,6 @@ public class Kartya {
         valasztas = Melyik();
         jatek();
     }
-    Kever();
 }
 
     private static String[] Kirak() {
