@@ -6,20 +6,21 @@ public class Kartya {
 
     static String[] tomb=Kirak();
     static int valasztas = Melyik();
-    static boolean jatekvege = false;
 
     public static void main(String[] args) {
         jatek();
-        
+        EzVolt();
     }
 
     private static void jatek() {
-    
-    Kever();
-    while (!jatekvege) {
+        Kever();
+    for (int i = 0; i < 3; i++) {
         valasztas = Melyik();
-        jatek();
+        Kever();
+        
     }
+
+        
 }
 
     private static String[] Kirak() {
@@ -167,22 +168,11 @@ public class Kartya {
         }
             break;
         }
-        EzVolt();
         
     }
     
-
-    private static boolean EzVolt() {
-        System.out.println("");
-        Scanner beker = new Scanner(System.in);
-        System.out.print("A 11-ik elem az amit választottál?: I/N: ");
-        String valasz = beker.nextLine();
-        if ("I".equals(valasz)){
-            jatekvege = true;
-        }else{
-            jatekvege = false;
-        }
-        return jatekvege;
+    private static void EzVolt() {
+        System.out.println(tomb[10]);
     }
 
 
