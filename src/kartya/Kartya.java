@@ -14,7 +14,7 @@ public class Kartya {
 
     private static void jatek() {
         Kever();
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 2; i++) {
         valasztas = Melyik();
         Kever();
         
@@ -172,7 +172,7 @@ public class Kartya {
     }
     
     private static void EzVolt() {
-        System.out.println(tomb[10]);
+        System.out.println("A választott lap: "+tomb[10]);
     }
 
 
